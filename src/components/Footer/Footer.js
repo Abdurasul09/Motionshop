@@ -39,8 +39,8 @@ const Footer = () => {
                     <h1>Связаться с нами:</h1>
                     <div className="flex justify-start mt-2">
                         <svg className="h-5 w-5 text-gray-500" width="24" height="24" viewBox="0 0 24 24"
-                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                             stroke-linejoin="round">
+                             strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
+                             strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <path
                                 d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/>
@@ -53,8 +53,8 @@ const Footer = () => {
 
                     <div className="flex justify-start mt-2">
                         <svg className="h-5 w-5 text-gray-500" width="24" height="24" viewBox="0 0 24 24"
-                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                             stroke-linejoin="round">
+                             strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
+                             strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <path
                                 d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/>
@@ -66,8 +66,8 @@ const Footer = () => {
                     </div>
                     <div className="flex justify-start mt-2">
                         <svg className="h-5 w-5 text-gray-500" width="24" height="24" viewBox="0 0 24 24"
-                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                             stroke-linejoin="round">
+                             strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
+                             strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <path
                                 d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/>
@@ -85,8 +85,8 @@ const Footer = () => {
             </div>
             <div className="text-center pt-5">
                 <div className="flex">
-                    <svg className="h-6 w-6 text-gray-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                         stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg className="h-6 w-6 text-gray-500" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2"
+                         stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z"/>
                         <circle cx="12" cy="12" r="9"/>
                         <path d="M14.5 9a3.5 4 0 1 0 0 6"/>
