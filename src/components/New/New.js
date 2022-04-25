@@ -1,0 +1,138 @@
+import React, {useEffect, useState} from 'react';
+import Modal from "../Modal/Modal";
+import SingleItem from "../SingleItem/SingleItem";
+import {useDispatch} from "react-redux";
+import {addAndDeleteProductInCart, checkProductCart, getCartInfo} from "../../../utils/redux/actions/cardAction";
+
+
+const New = () => {
+    const [modalActive, setModalActive] = useState(false)
+    const [singleItem, setSingleItem] = useState()
+    const dispatch = useDispatch();
+
+    // const [productsCountInCart, setProductsCountInCart] = useState()
+    // const [checkProductInCart, setCheckProductInCart] = useState(0)
+    //
+    // useEffect(() => {
+    //    setProductsCountInCart(JSON.parse(localStorage.getItem("cart")
+    //         ? JSON.parse(localStorage.getItem("cart")).products.length
+    //         : 0,))
+    //     dispatch(getCartInfo(productsCountInCart))
+    // }, [productsCountInCart])
+    //
+    useEffect(() => {
+        data?.products.slice(0, 1).map((item) => {
+            setSingleItem(item)
+        })
+    }, [data])
+
+    return (
+        <div className="bg-white">
+            <div className="py-16 sm:py-5">
+                <h2 className="text-2xl font-extrabold tracking-tight text-gray-600">Новинки</h2>
+                <div className="mt-2 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    {data.products.map(el => (
+                        <div key={el.id}>
+                            <div className="group relative" key={el.id}>
+                                <div
+                                    className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none"
+                                >
+                                    <img
+                                        src={el.image}
+                                        alt="Front of men&#039;s Basic Tee in black."
+                                        className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                                    />
+                                </div>
+                                <div className="mt-4 flex justify-between"
+                                     onClick={() => setSingleItem(el)}
+                                >
+                                    <div>
+                                        <h3 className="text-sm text-gray-700"
+                                            onClick={() => setModalActive(true)}
+                                        >
+                                            <span aria-hidden="true" className="absolute inset-0"/>
+                                            {el.category}
+                                        </h3>
+                                        <p className="mt-1 text-sm text-gray-500">{el.name}</p>
+                                    </div>
+                                    <p className="text-sm font-medium text-gray-900">${el.price}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <button
+                                        className="w-full bg-gray-200 hover:bg-gray-400 text-gray-800  py-2 px-4 rounded mt-4"
+                                    >
+                                        Добавить в корзину
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <Modal active={modalActive} setActive={setModalActive}>
+                <SingleItem singleItem={singleItem}/>
+            </Modal>
+        </div>
+    );
+};
+
+export default New;
+
+const data = {
+    products: [
+        {
+            name: 'Free Shirt',
+            slug: 'free-shirt',
+            category: 'Shirts',
+            image: '/images/shirt1.jpg',
+            isFeatured: true,
+            featuredImage: '/images/banner1.jpg',
+            price: 70,
+            brand: 'Nike',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 20,
+            description: 'A popular shirt',
+        },
+        {
+            name: 'Fit Shirt',
+            slug: 'fit-shirt',
+            category: 'Shirts',
+            image: '/images/shirt2.jpg',
+            isFeatured: true,
+            featuredImage: '/images/banner2.jpg',
+            price: 80,
+            brand: 'Adidas',
+            rating: 4.2,
+            numReviews: 10,
+            countInStock: 20,
+            description: 'A popular shirt',
+        },
+        {
+            name: 'Slim Shirt',
+            slug: 'slim-shirt',
+            category: 'Shirts',
+            image: '/images/shirt3.jpg',
+            price: 90,
+            brand: 'Raymond',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 20,
+            description: 'A popular shirt',
+        },
+        {
+            name: 'Golf Pants',
+            slug: 'golf-pants',
+            category: 'Pants',
+            image: '/images/pants1.jpg',
+            price: 90,
+            brand: 'Oliver',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 20,
+            description: 'Smart looking pants',
+        },
+    ]
+}
